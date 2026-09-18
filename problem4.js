@@ -1,0 +1,12 @@
+function getCngFare(distance, isNight, waitingMinutes){
+    let fare = 50;
+    if(distance > 2){
+        fare += (distance - 2) * 15;
+    }
+    fare += waitingMinutes * 2;
+    if(isNight){
+        fare *= 1.2;
+    }
+    return fare;
+}
+console.log(getCngFare(5, false, 10))
